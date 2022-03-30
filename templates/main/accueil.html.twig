@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title>
+</head>
+<body>
+<p>CDA088</p>
+<p>La promo {% set promo = "kdljfgsljfgteswjldfskjdgh"%}</p>
+{% set tableTest = {
+                    nom:'bob',
+                    prenom:'toto',
+                    nom2:'Hercule',
+                    prenom2:'poirreau'} %}
+
+{% for attributs, valeur in tableTest %}
+<p>{{ attributs }} : {{ valeur }}</p>
+{% endfor %}
+
+{{ promo }}
+
+<p>Le nombre est : {{ nombre | striptags | raw}}</p>
+
+<p>Mes films sont :
+    {% for film in films  %}
+        <di>{{ film | capitalize }}</di>
+    {% endfor %}
+</p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+lite des films
+
+    titre de la liste
+    <ul>
+        {% for film in allFilm %}
+            <li><a href="{{ path('film_details', {'id': film.id}) }}" >{{ film.titre }} - {{ film.annee }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
